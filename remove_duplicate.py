@@ -1,0 +1,12 @@
+def removeDuplicates(nums):
+    i = 1
+    while i < len(nums):
+        if nums[i - 1] == nums[i]:
+            nums.pop(i)
+            i -= 1
+        i += 1
+    return nums
+
+
+num = removeDuplicates([1, 1, 1, 1])
+print(f"The list after removing duplicate: {num}.")
